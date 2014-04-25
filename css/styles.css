@@ -1,0 +1,189 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: #333;
+}
+
+h2 {
+    margin: 0 0 0.5em;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.blue {
+    color: #3e64ad;
+}
+
+.white {
+    color: white;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix::after{
+    clear:both;
+    display:block;
+    height:0;
+    font-size:0;
+    visibility:hidden;
+    content:"."
+}
+
+body > div {
+    min-width: 1160px;
+}
+
+.center-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+}
+
+article {
+    text-align: justify;
+}
+
+#header {
+    height: 163px;
+    background: url("../images/header_bg.png") no-repeat center top;
+}
+
+#header h1 {
+    margin: 0;
+    padding-top: 21px;
+    color: #947954;
+}
+
+#header img {
+    vertical-align: bottom;
+}
+
+#header span {
+    font-size:  15px;
+    font-weight: 300;
+    vertical-align: bottom;
+}
+
+#welcome {
+    padding-bottom: 66px;
+}
+
+.oil-rafinery {
+    width: 562px;
+    height: 349px;
+    margin-top: 21px;
+    float: left;
+    background: url("../images/oil_rafinery.png") no-repeat;
+}
+
+.welcome-section {
+    margin-left: 640px;
+}
+
+#oil-description {
+    min-height: 739px;
+    background: url("../images/oil_factory.png") no-repeat center top;
+}
+
+.oil-section {
+    margin-right: 680px;
+    padding-top: 100px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 213px;
+    top: -69px;
+    width: 94px;
+    height: 94px;
+    background: url("../images/right_arrow.png") no-repeat;
+}
+
+#price .center-wrapper{
+    min-height: 420px;
+}
+
+.left-arrow {
+    width: 199px;
+    height: 199px;
+    position: absolute;
+    left: 169px;
+    top: 77px;
+    background: url("../images/left_arrow.png") no-repeat;
+}
+
+.big-truck {
+    width: 589px;
+    height: 210px;
+    position: absolute;
+    left: 16px;
+    bottom: -150px;
+    background: url("../images/big_truck.png") no-repeat;
+}
+
+.price-section {
+    width: 454px;
+    height: 331px;
+    background: url("../images/price_bg.png") no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: -66px;
+}
+
+#contact {
+    position: relative;
+    z-index: 1;
+    height: 592px;
+    padding-top: 160px;
+    background: url("../images/contact_bg.png") no-repeat center bottom;
+}
+
+.contact-section {
+    float: right;
+    margin-right: 50px;
+}
+
+.contact-section h2, .contact-section p {
+    text-align: right;
+}
+
+.copy {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #99805c;
+}
+
+/* form */
+.contact-form {
+    float: right;
+    width: 455px;
+}
+
+.row {
+    margin: 10px 0;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    width: 150px;
+    float: right;
+    border: none;
+    background: #957955;
+    color: #fff;
+}
