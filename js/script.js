@@ -14,6 +14,7 @@
             this.initEvents();
             this.animateSmokeClouds();
             this.animateOilRafinery();
+            this.fetchOilPrice();
         },
 
         initEvents: function() {
