@@ -264,7 +264,7 @@
 
         fetchOilPrice: function(el, opts) {
             $.getJSON({
-                url: url,
+                url: "http://falcon.thot.dev.acula.pl/oil_price",
                 success: function(data) {
                     $(".price-section article p").html(data.value + " PLN <span>NETTO / LITR</span>");
                     $(".price-section header").removeClass("hidden");
