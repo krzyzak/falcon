@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie ie6" lang="pl" dir="ltr"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie ie7" lang="pl" dir="ltr"> <![endif]-->
@@ -18,7 +17,7 @@
             <div class="center-wrapper">
                 <header>
                     <h1>
-                        <img src="images/logotyp.png" />
+                        <img src="images/logotyp.png" alt="" />
                         <span>Tekst jako przykładowy slogan</span>
                     </h1>
                 </header>
@@ -26,8 +25,13 @@
         </div>
         <div id="welcome">
             <div class="center-wrapper clearfix">
-                <div class="oil-rafinery"></div>
-                <div class="welcome-section">
+                <div class="oil-rafinery">
+                    <div class="wheel"></div>
+                    <div class="oil-arm"></div>
+                    <div class="wheel-joint"></div>
+                    <div class="vertical-joint"></div>
+                </div>
+                <div class="welcome-section left-slide">
                     <header>
                         <h2 class="blue">WITAMY</h2>
                     </header>
@@ -40,7 +44,7 @@
         </div>
         <div id="oil-description">
             <div class="center-wrapper">
-                <div class="oil-section">
+                <div class="oil-section right-slide">
                     <header>
                         <h2 class="blue">ROPA NAFTOWA</h2>
                     </header>
@@ -50,6 +54,9 @@
                     </article>
                 </div>
                 <div class="right-arrow"></div>
+                <div class="small-truck"></div>
+                <div class="left-smoke"></div>
+                <div class="right-smoke"></div>
             </div>
         </div>
         <div id="price">
@@ -57,12 +64,12 @@
                 <div class="left-arrow"></div>
                 <div class="big-truck"></div>
                 <div class="price-section">
-<!--                    <header>
+                    <header>
                         <h2>AKTUALNA CENA:</h2>
                     </header>
                     <article>
-                        <p>Lorem Ipsum jakis tam sobie przykladowy tekst</p>
-                    </article>-->
+                        <p>5,20 PLN <span>NETTO / LITR</span></p>
+                    </article>
                 </div>
             </div>
         </div>
@@ -83,7 +90,7 @@
                         <input type="submit" value="Wyślij" />
                     </div>
                 </form>
-                <div class="contact-section">
+                <div class="contact-section left-slide">
                     <header>
                         <h2 class="white">KONTAKT</h2>
                     </header>
@@ -94,17 +101,13 @@
                     </article>
                 </div>
                 <div class="clear"></div>
-                <div class="copy">Wszelkie prawa zastrzeżone. Kopiowanie materiałów bez zgody właściciela zabronione.</div>
+                <div class="copy">Copyright Falcon Sp. z o.o. Wszelkie prawa zastrzeżone. Kopiowanie materiałów bez zgody właściciela zabronione.</div>
             </div>
         </div>
-        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-        <script>
-            WebFont.load({
-                google: {
-                    families: ['Open+Sans:400,400italic,700,700italic:latin,latin-ext', 'Oswald:300,400,700:latin,latin-ext']
-                }
-            });
+        <script src="js/script.js">
         </script>
     </body>
 </html>

@@ -38,17 +38,53 @@ h2 {
 }
 
 body > div {
-    min-width: 1160px;
+    min-width: 1200px;
 }
 
 .center-wrapper {
-    width: 1160px;
+    width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     position: relative;
 }
 
 article {
     text-align: justify;
+}
+
+.left-slide,
+.left-slide header,
+.left-slide article,
+.right-slide,
+.right-slide header,
+.right-slide article {
+    position: relative;
+    z-index: 2;
+}
+
+.left-slide header,
+.right-slide header {
+    position: relative;
+    top: -50px;
+    opacity: 0;
+/*    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;*/
+}
+
+.left-slide article,
+.right-slide article {
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out 0.3s;
+    transition: all 0.5s ease-in-out 0.3s;
+}
+
+.left-slide article {
+    left: -100px;
+}
+
+.right-slide article {
+    left: 100px;
 }
 
 #header {
@@ -81,7 +117,52 @@ article {
     height: 349px;
     margin-top: 21px;
     float: left;
+    position: relative;
     background: url("../images/oil_rafinery.png") no-repeat;
+}
+
+.wheel {
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    left: 21px;
+    top: 228px;
+    background: url("../images/wheel.png") no-repeat;
+}
+
+.oil-arm {
+    width: 366px;
+    height: 166px;
+    position: absolute;
+    left: 77px;
+    top: 3px;
+    z-index: 1;
+    background: url("../images/oil_arm.png") no-repeat;
+    -ms-transform-origin: 146px 94px;
+    -webkit-transform-origin: 146px 94px;
+    transform-origin: 146px 94px;
+}
+
+.wheel-joint {
+    width: 27px;
+    height: 149px;
+    position: absolute;
+    left: 85px;
+    bottom: 74px;
+    background: url("../images/wheel_joint.png") no-repeat;
+    background-size: 100% 100%;
+    transform-origin: 25px 147px;
+    -ms-transform-origin: 25px 147px;
+    -webkit-transform-origin: 25px 147px;
+}
+
+.vertical-joint {
+    width: 26px;
+    height: 227px;
+    position: absolute;
+    left: 416px;
+    top: 116px;
+    background: url("../images/vertical_joint.png") no-repeat;
 }
 
 .welcome-section {
@@ -100,11 +181,46 @@ article {
 
 .right-arrow {
     position: absolute;
-    right: 213px;
+    right: 233px;
     top: -69px;
     width: 94px;
     height: 94px;
     background: url("../images/right_arrow.png") no-repeat;
+}
+
+.small-truck {
+    width: 220px;
+    height: 61px;
+    position: absolute;
+    left: 30px;
+    top: 649px;
+    opacity: 0;
+    background: url("../images/small_truck.png") no-repeat;
+}
+
+.left-smoke {
+    position: absolute;
+    width: 140px;
+    height: 300px;
+    left: 444px;
+    top: 259px;
+}
+
+.right-smoke {
+    position: absolute;
+    width: 140px;
+    height: 300px;
+    right: 224px;
+    top: 152px;
+}
+
+.smoke {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background:url('../images/smoke-texture.png') no-repeat;
+    bottom: 150px;
+    margin-left:0px
 }
 
 #price .center-wrapper{
@@ -115,7 +231,7 @@ article {
     width: 199px;
     height: 199px;
     position: absolute;
-    left: 169px;
+    left: 189px;
     top: 77px;
     background: url("../images/left_arrow.png") no-repeat;
 }
@@ -124,8 +240,9 @@ article {
     width: 589px;
     height: 210px;
     position: absolute;
-    left: 16px;
-    bottom: -150px;
+    left: -100px;
+    bottom: -166px;
+    z-index: 1;
     background: url("../images/big_truck.png") no-repeat;
 }
 
@@ -134,8 +251,31 @@ article {
     height: 331px;
     background: url("../images/price_bg.png") no-repeat;
     position: absolute;
-    right: 0;
+    right: 20px;
     bottom: -66px;
+    padding: 58px 0 0 100px;
+}
+
+.price-section h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    color: #dcdcdc;
+}
+
+.price-section p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+
+.price-section p span {
+    font-size: 13px;
+    letter-spacing: 0.1em;
 }
 
 #contact {
@@ -151,7 +291,8 @@ article {
     margin-right: 50px;
 }
 
-.contact-section h2, .contact-section p {
+.contact-section h2,
+.contact-section p {
     text-align: right;
 }
 
@@ -186,4 +327,41 @@ input[type="submit"] {
     border: none;
     background: #957955;
     color: #fff;
+}
+
+/* Animations */
+@-webkit-keyframes opacityOn
+{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes opacityOn
+{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes opacityOff
+{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes opacityOff
+{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@-webkit-keyframes moveLeft
+{
+    from {left: 30px}
+    to {left: -70px}
+}
+
+@keyframes moveLeft
+{
+    from {left: 30px}
+    to {left: -70px}
 }
