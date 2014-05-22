@@ -28,6 +28,10 @@ h2 {
     clear: both;
 }
 
+.hidden {
+    display: none;
+}
+
 .clearfix::after{
     clear:both;
     display:block;
